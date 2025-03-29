@@ -1,16 +1,12 @@
-const BASE_URL = "http://localhost:5000";
+import axios from 'axios';
+
+const API_URL = 'http://localhost:5000/chat';
 
 export const sendMessageToBackend = async (message) => {
   try {
-    const response = await fetch(`${BASE_URL}/chat`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message }),
-    });
-
-    return await response.json();
+    const response = await axios.post(API_URL, { message });
+    return response.data.response; // Assumes backend returns { response: "text" }
   } catch (error) {
-    console.error("Error sending message:", error);
-    return { response: "Error connecting to backend." };
+    throw new Error('Failed to fetch response from backend');
   }
 };
