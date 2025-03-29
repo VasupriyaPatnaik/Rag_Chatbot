@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import ChatBox from './components/ChatBox'; // Corrected import
-import InputBox from './components/InputBox';
+import InputBox from './components/InputBar';
 import Header from './components/Header';
 
 function App() {
