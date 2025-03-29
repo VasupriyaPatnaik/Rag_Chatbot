@@ -1,0 +1,7 @@
+flask==3.0.3
+flask-cors==4.0.0
+ollama==0.1.8
+chromadb==0.4.24
+sentence-transformers==2.6.1
+googletrans==4.0.0-rc1  # For translation (note: use with caution, API limits apply)
+sqlite3  # Built-in with Python
